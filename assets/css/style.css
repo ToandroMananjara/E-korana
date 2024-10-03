@@ -1,0 +1,356 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-white: #fff;
+  --secondary-grey: #b8b4b4;
+  --btn-bg: linear-gradient(
+    90deg,
+    rgba(96, 76, 163, 1) 35%,
+    rgba(147, 66, 145, 1) 65%
+  );
+}
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+/* Style pour le header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--primary-white);
+  padding: 1em 1em;
+  box-shadow: 0em 0.5em 1em var(--secondary-grey);
+  z-index: 22;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-container ul {
+  display: flex;
+  gap: 2em;
+  margin: 0;
+}
+.navbar-container ul li {
+  list-style: none;
+  margin: 0;
+}
+.logout {
+  color: var(--primary-white);
+  background: var(--btn-bg);
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+}
+/* Fin style header */
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    90deg,
+    rgba(96, 76, 163, 1) 35%,
+    rgba(147, 66, 145, 1) 65%
+  );
+}
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-container {
+  background: rgb(255, 255, 255, 0.2);
+  border-radius: 0.4em;
+}
+.form {
+  color: #505a5f;
+  background: #ffffff;
+  border-radius: 0.4em;
+  padding: 2em;
+}
+.form h1 {
+  text-align: center;
+  margin: 0.5em;
+}
+.error-message {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+.form-container .input {
+  height: 3em;
+  width: 100%;
+  outline: none;
+  border: 1px solid #dbddde;
+  border-radius: 0.4em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+#password {
+  margin: 0;
+}
+#login {
+  height: 3em;
+  width: 100%;
+  color: #ffffff;
+  background: linear-gradient(
+    90deg,
+    rgba(96, 76, 163, 1) 35%,
+    rgba(147, 66, 145, 1) 65%
+  );
+  border: none;
+  border-radius: 0.4em;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+.password-container {
+  position: relative;
+  margin-bottom: 1em;
+}
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.5em;
+  cursor: pointer;
+}
+.mot-passe-oublié {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5em;
+}
+.forgot-mdp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.forgot-mdp-container h3 {
+  /* margin: 0; */
+}
+.mail-send {
+  height: 3em;
+  width: 8em;
+  outline: none;
+  border: none;
+  border-radius: 1em;
+  color: #ffffff;
+  background: linear-gradient(
+    90deg,
+    rgba(96, 76, 163, 1) 35%,
+    rgba(147, 66, 145, 1) 65%
+  );
+  cursor: pointer;
+}
+.signup {
+  height: 3em;
+  width: 100%;
+  color: #ffffff;
+  background: green;
+  border: none;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+.pop-up-container {
+  position: absolute;
+  display: none;
+}
+.pop-up {
+  background: white;
+  position: relative;
+}
+.cancel {
+  position: absolute;
+  top: 0em;
+  right: 1em;
+  font-size: 2em;
+  cursor: pointer;
+}
+.cancel img {
+  width: 1em;
+  height: 1em;
+}
+.submit-inscription {
+  height: 2.5em;
+  width: 12em;
+  color: #ffffff;
+  background: green;
+  border: none;
+  border-radius: 0.4em;
+  cursor: pointer;
+  margin: 1em 0 0 0;
+}
+
+/* Style pour homepage */
+
+.row-grid {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Create three unequal columns that sits next to each other */
+.column {
+  height: 100vh; /* Should be removed. Only for demonstration */
+  padding-top: 5em !important;
+}
+
+/* Left and right column */
+.column.side {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: hidden; /* Empêche le défilement dans les colonnes latérales */
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+/* Middle column */
+.column.middle {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  overflow-y: auto;
+}
+
+.input-pub {
+  border: none;
+  outline: none;
+  height: 5em;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+.avatar-compte img {
+  border-radius: 100%;
+  width: 3em;
+  height: 3em;
+}
+
+.avatar-pub img {
+  border-radius: 100%;
+  width: 5em;
+  height: 5em;
+}
+
+.create-pub {
+  border-radius: 0.5em;
+  box-shadow: 0em 0.5em 1em var(--secondary-grey);
+}
+.publier {
+  color: var(--primary-white);
+  background: var(--btn-bg);
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  border: none;
+}
+
+.form-pub {
+  /* border-top: var(--primary-white) 1px solid; */
+  border-bottom: var(--primary-white) 1px solid;
+}
+
+.upload-file img {
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+}
+
+/* Style publication */
+.post {
+  border-radius: 0.5em;
+  box-shadow: 0em 0.5em 1em var(--secondary-grey);
+  background: var(--primary-white);
+  margin: 2em 0;
+  /* border-bottom: var(--primary-white) 1px solid; */
+}
+
+.more-post {
+  top: 0.5em;
+  right: 1.5em;
+  cursor: pointer;
+}
+
+.contenu p {
+  /* margin-bottom: 1.5em; */
+}
+.action {
+  border-top: 1px solid;
+  padding-top: 0.5em;
+}
+.react {
+  /* display: flex; */
+  padding: 0 0 1em 0px;
+  display: none;
+  position: absolute;
+  top: -55px;
+  left: -30px;
+}
+.react-item {
+  background: white;
+  border-radius: 2em;
+  box-shadow: 0em 0.5em 1em var(--secondary-grey);
+  /* padding: 1em; */
+}
+.react-container {
+  position: relative;
+}
+.like-container:hover .react,
+.react:hover {
+  display: flex; /* Affiche les réactions au survol de .like-container ou de .react */
+}
+
+.react-container img,
+.chat-comment img {
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
+}
+
+/* style commentaire */
+.comment-container {
+}
+.comment-item {
+  background: #ccc;
+  border-radius: 0.5em;
+}
+.comment-action,
+.post-action {
+  font-size: large;
+  height: 10em;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 0.5em;
+  box-shadow: 0em 0.5em 1em var(--secondary-grey);
+}
+.more-commentaire {
+  right: 1em;
+  cursor: pointer;
+}
+.cancel-comment-action {
+  right: 0.5em;
+  top: 0;
+  font-size: 2em;
+}
+.comment-contenu {
+  text-wrap: wrap;
+  word-wrap: break-word; /* Gère les mots très longs */
+  overflow-wrap: break-word; /* Assure la compatibilité avec tous les navigateurs modernes */
+  white-space: normal; /* Permet au texte de descendre à la ligne normale */
+  hyphens: auto;
+}
+.send-comment img {
+  width: 3em;
+  height: 3em;
+}
+/* Fin style homepage */
+
+/* Fin style publication */
